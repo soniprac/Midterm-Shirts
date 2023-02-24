@@ -1,10 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Input Page</title>
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{css/style.css}">
 </head>
 <body>
-$END$
+<header >
+    <h1 style="color: mediumpurple; text-shadow: 1px 1px 5px;"> Midterm v3 </h1>
+</header>
+<main style="padding-left: 1em;">
+    <h2 style="color: saddlebrown;">Shirts</h2>
+    <form action="Output.html" th:action="@{/input}">
+        <div>
+            <div>
+
+                <label style="color: #673ab7;" for="nameField" Placeholder="Enter Shirt Name" >Shirt Model Name</label>
+                <input style="    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;"  type="text" id="nameField" name="name" required>
+            </div>
+            <br>
+            <div style="    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;">
+
+                <label style="color:black;" >Sleeve Length</label>
+                <input style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                align-items: center;"
+                       type="radio" id="long" name="length" value="long" checked>
+                <label for="long">Long</label>
+                <input style="
+                flex-wrap: wrap;
+                display: flex;
+                gap: 20px;
+                align-items: center;"
+                       type="radio" id="short" name="length" value="short">
+                <label for="short">Short</label><br>
+            </div>
+            <br>
+            <br>
+            <div style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;">
+                <label style="color: #673ab7;" >Choose a Color</label><br><br>
+                <input style="    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;" type="checkbox" id="white" name="white" value="White">
+                <label style="color: #673ab7;" for="white">White</label>
+                <input  style="    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;" type="checkbox" id="blue" name="blue" value="Blue">
+                <label style="color: #673ab7;" for="blue">Blue</label>
+                <input  style="    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;" type="checkbox" id="green" name="green" value="Green">
+                <label style="color: #673ab7;" for="green">Green</label>
+                <input  style="    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;" type="checkbox" id="yellow" name="yellow" value="Yellow">
+                <label style="color: #673ab7;" for="yellow">Yellow</label>
+            </div>
+            <br>
+            <input style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;"
+                   type="submit">
+        </div>
+    </form>
+</main>
+
+<footer style= "font-size: 1.2em;
+    font-weight: bolder;
+    color: slategrey;
+    position: absolute;
+    border-top: darkslategrey solid;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1.5em;
+    margin-top: 2em;
+    width: 20em;
+    bottom: 0;">
+    Sheridan College, Prachi Soni&nbsp;</footer>
 </body>
 </html>

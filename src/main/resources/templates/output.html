@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Output Page:</title>
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{css/style.css}">
 </head>
 <body>
-$END$
+<header>
+    <h1 style="  color: mediumpurple;
+    text-shadow: 1px 1px 5px;">Midterm v3</h1>
+</header>
+<main style="padding-left: 5px;">
+    <h2 style="color:saddlebrown;">Shirt Details</h2>
+    <form action="Input.html" th:action="@{/input}"/>
+
+    <div>
+        <p style="color: darkslategrey;" th:text="'Shirt Model:'+${shirtColor.name}"></p>
+        <p style="color: darkslategrey;" th:text="'Shirt Length:'+${shirtColor.length}"></p>
+        <p style="color: darkslategrey;" th:text ="'Is it White?:'+${shirtColor.isWhite() == 'White' ? 'Yes' : 'No'}"></p>
+        <p style="color: darkslategrey;" th:text ="'Is it Blue?'+${shirtColor.isBlue() == 'Blue' ? 'Yes' : 'No'}"></p>
+        <p style="color: darkslategrey;" th:text ="'Is it Yellow?'+${shirtColor.isYellow() == 'Yellow' ? 'Yes' : 'No'}"></p>
+        <p style="color: darkslategrey;" th:text ="'Is it Green?' + ${shirtColor.isGreen() == 'Green' ? 'Yes' : 'No'}"></p>
+    </div>
+</main>
+<input style="
+flex-wrap: wrap;
+display: flex;
+gap: 20px;
+align-items: center;"
+       type="submit"
+       id="back "
+       value="Back"
+       name="back">
+
+<footer style= "font-size: 1.2em;
+    font-weight: bolder;
+    color: slategrey;
+    position: absolute;
+    border-top: darkslategrey solid;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1.5em;
+    margin-top: 2em;
+    width: 25em;">
+    Sheridan College, Prachi Soni&nbsp;</footer>
 </body>
 </html>
